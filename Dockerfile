@@ -1,9 +1,5 @@
-FROM python:3.12-slim
+FROM nginx:alpine
 
-WORKDIR /app
+RUN echo 'EDITO Generic works' > /usr/share/nginx/html/index.html
 
-COPY app.py .
-
-EXPOSE 8080
-
-CMD ["python", "app.py"]
+EXPOSE 80
